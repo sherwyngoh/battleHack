@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2015-03-28
+  dod: 2015-03-28
+  about: MyString
+  race: MyString
+  guestbook: false
+  wake: MyString
+  wake_date: 2015-03-28 13:46:09
+  funeral: MyString
+  funeral_date: 2015-03-28 13:46:09
+  theme: MyString
+  religion: MyString
+  contact_email: MyString
+  contact_number: MyString
+
+two:
+  name: MyString
+  dob: 2015-03-28
+  dod: 2015-03-28
+  about: MyString
+  race: MyString
+  guestbook: false
+  wake: MyString
+  wake_date: 2015-03-28 13:46:09
+  funeral: MyString
+  funeral_date: 2015-03-28 13:46:09
+  theme: MyString
+  religion: MyString
+  contact_email: MyString
+  contact_number: MyString

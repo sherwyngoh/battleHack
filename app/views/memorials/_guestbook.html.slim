@@ -1,0 +1,8 @@
+.container
+  .gb
+    - @gb_data.each do |entry|
+      .page
+        h3= entry[:author]
+        p= entry[:comment]
+
+  .data.gb-pages= @gb_data
