@@ -1,17 +1,24 @@
 = simple_form_for @memorial do |f|
   h3 Details
-  = f.input :name
-  = f.input :about
-  = f.input :dob, label: "Date of Birth"
-  = f.input :dod, label: "Date of Passing"
-  = f.input :race, include_blank: false, collection: ['Chinese', 'Eurasian', 'Indian', 'Malay']
-  = f.input :religion, include_blank: false, collection: ['Taoist', 'Free Thinker', 'Buddhist', 'Christian']
-  = f.input :wake, label: "Wake Details"
-  = f.input :wake_date
-  = f.input :funeral, label: "Wake Details"
-  = f.input :funeral_date
+  = f.input :name, label: false, placeholder: "Full Name"
+  = f.input :about, as: :text, label: false, placeholder: "Short description"
+  = f.input :dob, start_year: Date.today.year - 90, end_year: Date.today.year, order: [:day, :month, :year], label: "Date of Birth"
+  = f.input :dod, start_year: Date.today.year - 5, end_year: Date.today.year, order: [:day, :month, :year], label: 'Date of Passing'
 
-  = f.input :contact_email
-  = f.input :theme, collection: ['Solemn', 'Modern', 'Floral']
+  / = f.input :race, include_blank: false, prompt: "Select Race", collection: ['Chinese', 'Eurasian', 'Indian', 'Malay']
+
+  = f.input :religion, prompt: "Select Race", include_blank: false, collection: ['Taoist', 'Free Thinker', 'Buddhist', 'Christian'], label: false
+
+  = f.input :wake, label: false, placeholder: 'Wake Details'
+  = f.input :wake_date, label: 'Wake Begin'
+  = f.input :wake_end_date, label: 'Wake End'
+
+  = f.input :funeral , label: false, placeholder: "Funeral Details"
+  = f.input :funeral_date, label: 'Funeral Start'
+  = f.input :funeral_end_date, label: 'Funeral End'
+
+  = f.input :contact_email, label: false, placeholder: 'Contact Person Email'
+  = f.input :contact_number, label: false, placeholder: 'Contact Person Number'
+  = f.input :theme, collection: ['Solemn', 'Modern', 'Floral'], label: false, include_blank: false
   
   = f.button :submit
